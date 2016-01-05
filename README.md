@@ -28,7 +28,7 @@ $ java -jar netty-server.jar
 http://localhost:8283/sample.mp3.
 
 # Why I changed code from netty example.
-The purpose of code change is that I removed request chunked encoding feature since it's
+The purpose of code change is that I removed "request chunked encoding" feature since it's
 unnecessary for media streaming server.(the server focuses on download, not upload)
 
 And I also added code for Partial Request.
