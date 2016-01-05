@@ -208,12 +208,7 @@ public class HttpStaticFileServerHandler2 extends SimpleChannelInboundHandler<Ht
 					.parseInt(rangeHeader.trim().replace(HttpHeaders.Values.BYTES + "=", "").replace("-", ""));
 		} catch (NumberFormatException e) {
 		}
-
-		if (startOffset == 0) {
-			endOffset = startOffset + (fileLength / 1);
-		} else {
-			endOffset = startOffset + (fileLength / 1);
-		}
+		endOffset = startOffset + fileLength;
 
 		if (endOffset >= fileLength) {
 			endOffset = fileLength - 1;
