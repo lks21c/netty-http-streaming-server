@@ -31,14 +31,12 @@
             <artifactId>netty-codec-http</artifactId>
             <version>${netty.version}</version>
         </dependency>
-
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <scope>test</scope>
             <version>${junit-version}</version>
         </dependency>
-
     </dependencies>
 
     <build>

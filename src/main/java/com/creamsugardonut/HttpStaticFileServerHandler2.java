@@ -90,8 +90,6 @@ public class HttpStaticFileServerHandler2 extends SimpleChannelInboundHandler<Ht
 		String rangeHeader = request.headers().get(HttpHeaders.Names.RANGE);
 		System.out.println(HttpHeaders.Names.RANGE + " = " + rangeHeader);
 		if (rangeHeader != null && rangeHeader.length() > 0) { // Partial Request
-			System.out.println("Partial Request");
-
 			PartialRequestInfo partialRequestInfo = getPartialRequestInfo(rangeHeader, fileLength);
 
 			// Set Response Header
@@ -111,7 +109,6 @@ public class HttpStaticFileServerHandler2 extends SimpleChannelInboundHandler<Ht
 					partialRequestInfo.getChunkSize()), ctx.newProgressivePromise());
 		} else {
 			// Set Response Header
-			System.out.println("No Partial Request");
 			HttpHeaders.setContentLength(response, fileLength);
 
 			// Write Response
