@@ -24,7 +24,7 @@ $ java -jar netty-server.jar
 ```
 > After launching the jar file, streaming server is run on 8283 port.
 >
-> Then you can test streaming is working via VLC player with url
+> Then you can test media streaming is working via VLC player with url
 http://localhost:8283/sample.mp3.
 
 # Why I changed code from netty example.
